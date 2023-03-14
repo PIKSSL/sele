@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="a.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="urlap">
+    <form id="rendeles">
+        <p>Kötelező kitölteni:</p>
+        <input type="text" placeholder="Irányítószám" class="urToggle" id="iranyito" name="iranyitoszam" required pattern="^\d{4}$">
+        <input type="text" class="urToggle" id="varos" placeholder="Város" name="varos" required pattern="^[a-zA-Z]{2,30}$">
+        <input type="text" placeholder="Közterület neve" class="urToggle" id="kozterulet_neve" name="kozterulet_neve" required pattern="^[a-zA-Z]{2,50}$">
+        <input type="text" placeholder="Közterület jellege" class="urToggle" id="kozterulet_jellege" name="kozterulet_jellege" required pattern="^[a-zA-Z]{2,30}$">
+        <input type="text" placeholder="Ház/Helyrajzi szám" class="urToggle" id="hely_hazszam" name="hely_hazszam" required pattern="^[a-zA-Z0-9]{1,12}$">
+        
+        <br><label for="hsz">Házszám</label>
+        <input type="radio" class="urToggle" id="hsz" name="hely_haz_jelleg" value="hsz" required>
+        <label for="hzsz">Helyrajzi szám</label>
+        <input type="radio" class="urToggle" id="hrsz" name="hely_haz_jelleg" value="hrsz" required>
+        <p>Opcionális:</p>
+        <input type="text" placeholder="Épület" class="urToggle" id="epulet" name="epulet" pattern="^$|^[a-zA-Z0-9]{1,6}$">
+        <input type="text" placeholder="Emelet" class="urToggle" id="emelet" name="emelet" pattern="^$|^[a-zA-Z0-9]{1,2}$">
+        <input type="text" placeholder="Ajtó" class="urToggle" id="ajto" name="ajto" pattern="^$|^[a-zA-Z0-9]{1,5}$">   
+        <input type="text" placeholder="Kapucsengő" class="urToggle" id="kapucsengo" name="kapucsengo"><br><br>
+        <input type="checkbox" id="szallCimMentes"><label for="szallCimMentes">Mentés szállítási címként</label>
+        <input class="rendelesBefejezGomb" type="submit" value="Véglegesítés">
+        </form>
+        <div class="success-message">
+        </div>
+    </div>
+</body>
+</html>
